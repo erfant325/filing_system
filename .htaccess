@@ -1,0 +1,90 @@
+RewriteEngine On
+
+#root
+RewriteRule ^index$ index.php?line=index [L]
+RewriteRule ^superadmin$ view/superadmin/index.php [L]
+RewriteRule ^login$ view/superadmin/login.php [L]
+
+#file add
+RewriteRule ^file_add_sale_apartment$ view/superadmin/index.php?line=file_add_sale_apartment [L]
+RewriteRule ^file_add_rent_apartment$ view/superadmin/index.php?line=file_add_rent_apartment [L]
+RewriteRule ^file_add_sale_commercial$ view/superadmin/index.php?line=file_add_sale_commercial [L]
+RewriteRule ^file_add_rent_commercial$ view/superadmin/index.php?line=file_add_rent_commercial [L]
+RewriteRule ^file_add_sale_old$ view/superadmin/index.php?line=file_add_sale_old [L]
+RewriteRule ^file_add_rent_old$ view/superadmin/index.php?line=file_add_rent_old [L]
+
+#file add code
+RewriteRule ^file_add_sale_apartment/code/(.*)$ view/superadmin/index.php?code=$1&line=file_add_sale_apartment [L]
+RewriteRule ^file_add_rent_apartment/code/(.*)$ view/superadmin/index.php?code=$1&line=file_add_rent_apartment [L]
+RewriteRule ^file_add_sale_commercial/code/(.*)$ view/superadmin/index.php?code=$1&line=file_add_sale_commercial [L]
+RewriteRule ^file_add_rent_commercial/code/(.*)$ view/superadmin/index.php?code=$1&line=file_add_rent_commercial [L]
+RewriteRule ^file_add_sale_old/code/(.*)$ view/superadmin/index.php?code=$1&line=file_add_sale_old [L]
+RewriteRule ^file_add_rent_old/code/(.*)$ view/superadmin/index.php?code=$1&line=file_add_rent_old [L]
+
+#file archive
+RewriteRule ^file_archive_sale_apartment$ view/superadmin/index.php?line=file_archive_sale_apartment [L]
+RewriteRule ^file_archive_sale_commercial$ view/superadmin/index.php?line=file_archive_sale_commercial [L]
+RewriteRule ^file_archive_sale_old$ view/superadmin/index.php?line=file_archive_sale_old [L]
+RewriteRule ^file_archive_rent_apartment$ view/superadmin/index.php?line=file_archive_rent_apartment [L]
+RewriteRule ^file_archive_rent_commercial$ view/superadmin/index.php?line=file_archive_rent_commercial [L]
+RewriteRule ^file_archive_rent_old$ view/superadmin/index.php?line=file_archive_rent_old [L]
+
+#file edit
+RewriteRule ^file_edit_sale_apartment/(.*)$ view/superadmin/index.php?code=$1&line=file_edit_sale_apartment [L]
+RewriteRule ^file_edit_sale_commercial/(.*)$ view/superadmin/index.php?code=$1&line=file_edit_sale_commercial [L]
+RewriteRule ^file_edit_sale_old/(.*)$ view/superadmin/index.php?code=$1&line=file_edit_sale_old [L]
+RewriteRule ^file_edit_rent_apartment/(.*)$ view/superadmin/index.php?code=$1&line=file_edit_rent_apartment [L]
+RewriteRule ^file_edit_rent_commercial/(.*)$ view/superadmin/index.php?code=$1&line=file_edit_rent_commercial [L]
+RewriteRule ^file_edit_rent_old/(.*)$ view/superadmin/index.php?code=$1&line=file_edit_rent_old [L]
+
+#file disable
+RewriteRule ^file_disable_sale_apartment$ view/superadmin/index.php?line=file_disable_sale_apartment [L]
+RewriteRule ^file_disable_sale_commercial$ view/superadmin/index.php?line=file_disable_sale_commercial [L]
+RewriteRule ^file_disable_sale_old$ view/superadmin/index.php?line=file_disable_sale_old [L]
+RewriteRule ^file_disable_rent_apartment$ view/superadmin/index.php?line=file_disable_rent_apartment [L]
+RewriteRule ^file_disable_rent_commercial$ view/superadmin/index.php?line=file_disable_rent_commercial [L]
+RewriteRule ^file_disable_rent_old$ view/superadmin/index.php?line=file_disable_rent_old [L]
+
+#file print
+RewriteRule ^file_print_sale_apartment/(.*)$ view/superadmin/printer/printer.php?status=$1&line=sale_apartment [L]
+RewriteRule ^file_print_sale_commercial/(.*)$ view/superadmin/printer/printer.php?status=$1&line=sale_commercial [L]
+RewriteRule ^file_print_sale_old/(.*)$ view/superadmin/printer/printer.php?status=$1&line=sale_old [L]
+RewriteRule ^file_print_rent_apartment/(.*)$ view/superadmin/printer/printer.php?status=$1&line=rent_apartment [L]
+RewriteRule ^file_print_rent_commercial/(.*)$ view/superadmin/printer/printer.php?status=$1&line=rent_commercial [L]
+RewriteRule ^file_print_rent_old/(.*)$ view/superadmin/printer/printer.php?status=$1&line=rent_old [L]
+
+#user setting
+RewriteRule ^file_code_search$ view/superadmin/index.php?line=file_code_search [L]
+RewriteRule ^profile_setting$ view/superadmin/index.php?line=profile_setting [L]
+RewriteRule ^user_manage$ view/superadmin/index.php?line=user_manage [L]
+RewriteRule ^profile_setting/(.*)$ view/superadmin/index.php?status=$1&line=profile_setting [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#RewriteRule ^picture/(.*)$ index.php?id=$1&line=show_detail [L]
+#RewriteRule ^add_gallery$ view/superadmin/index.php?line=add_gallery [L]
+#RewriteRule ^video_archive$ index.php?line=video_archive [L]
+#RewriteRule ^gallery_archive$ index.php?line=gallery_archive [L]
+#RewriteRule ^video_detail/(.*)$ index.php?id=$1&line=show_detail_video [L]
+#RewriteRule ^categories$ index.php?line=categories [L]
+#RewriteRule ^detail_category/(.*)$ index.php?id=$1&line=detail_category [L]
+#RewriteRule ^blog$ index.php?line=blog [L]
+#RewriteRule ^blog_detail/(.*)$ index.php?id=$1&line=blog_detail [L]
